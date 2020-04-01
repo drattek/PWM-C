@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: cpwm 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: cpwm 
+    spec:
+      containers:
+        - name: cpwm 
+          image: witio.azurecr.io/cpwm
+          ports:
+          - containerPort: 8500
